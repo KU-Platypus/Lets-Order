@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <title>Title</title>
+    <link th:href="@{/css/order_list.css}" rel="stylesheet" />
+</head>
+
+<bar>
+    <div th:replace="/order/order_list_bar.html :: order-list-bar"></div>
+</bar>
+
+<body>
+    <div th:each="detail : ${detailCartDto}">
+        <div class="order-detail-container">
+            <h2 class="detail-name">[[${detail.cartName}]]</h2>
+            <div>개 당 가격 : [[${detail.cartPrice}]] 원</div>
+            <div class="detail-amount">주문 개수 : [[${detail.cartAmount}]]개</div>
+            <div>총 : [[${detail.cartTotal}]]원</div>
+        </div>
+    </div>
+</body>
+
+<div th:replace="/fragments/nav.html :: fragment-nav"></div>
+</html>

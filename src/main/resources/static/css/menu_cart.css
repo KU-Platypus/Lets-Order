@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'NanumSquareRoundOTFEB';
+    src: url(/font/NanumSquareRoundOTFEB.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareRoundOTFR';
+    src: url(/font/NanumSquareRoundOTFR.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareRoundOTFL';
+    src: url(/font/NanumSquareRoundOTFL.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareOTF_acL';
+    src: url(/font/NanumSquareOTF_acL.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareOTF_acEB';
+    src: url(/font/NanumSquareOTF_acEB.otf)
+}
+
+body {
+    margin-top: 5rem;
+}
+
+.menu-cart-bar {
+    height: 3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color : #FF4E71;
+    box-shadow: 0px -1px 3px 0px #C1C1C1;
+    font-size: 20px;
+}
+
+.menu-cart-bar-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'NanumSquareRoundOTFEB';
+}
+
+.menu-cart-bar-left{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.return-btn {
+    margin: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.return-btn:hover{
+    color: #FFFFFF;
+}
+
+.home-btn {
+    border: none;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.home-btn img{
+    max-height: 1.5rem;
+}
+
+.cart-all-delete, .order-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    text-decoration: none;
+    border-radius: 0.6rem;
+    background-color: #EEEEEE;
+    font-family: 'NanumSquareRoundOTFR';
+    font-size: 20px;
+    color: #313131;
+}
+
+.list-total-price {
+    padding-bottom: 0.8rem;
+    font-family: 'NanumSquareOTF_acEB';
+    font-size: 23px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #BEBEBE;
+}
+
+.btn-box button{
+    width: 48%;
+}
+
+.cart-list ul {
+    font-family: 'NanumSquareRoundOTFR';
+    font-size: 17px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.cart-detail {
+    padding-left: 0.3rem;
+}
+
+.cart-list ul li{
+    border-bottom: 1px solid #BEBEBE;
+    padding-bottom: 1.5rem;
+}
+
+.cart-title {
+    font-family: 'NanumSquareOTF_acEB';
+    fot-size: 25px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #BEBEBE;
+}

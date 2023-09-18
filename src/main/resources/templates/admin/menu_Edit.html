@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>관리자 - 메뉴 수정</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="/js/admin_menu_edit.js"></script>
+</head>
+<body>
+
+<form action="/admin/menuEdit" method="post" enctype="multipart/form-data">
+  <div>
+  <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+  <input type="hidden" name="menuid" th:value="${menu.id}">
+  </div>
+
+  <div>
+    <label for="menuNameInput">메뉴명:</label>
+    <input type="text" id="menuNameInput" name="menuName" th:value="${menu.menuName}"/>
+  </div>
+
+  <div>
+    <label for="menuPriceInput">가격  :</label>
+    <input type="text" id="menuPriceInput" name="menuPrice" th:value="${menu.menuPrice}"/>
+  </div>
+
+  <div >
+    <img id="menuImg" th:src="${menu.menuImg} ?: '/img/wait.png'" style="width:250px; height:250px;">
+    <!-- 이미지 수정여부 체크 -->
+    <input type="hidden" id="menuImgChanged" name="menuImgChanged" value="false">
+  </div>
+
+  <div>
+    <input type="file" id="menuImgInput" name="image" onchange="onMenuImgChange()">
+    <input type="submit" value="수정">
+  </div>
+
+</form>
+</body>
+</html>

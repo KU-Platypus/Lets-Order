@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>주문내역</title>
+
+  <link th:href="@{/css/order_list.css}" rel="stylesheet" />
+  <script src="/js/webSocket_connect.js"></script>
+</head>
+
+<bar>
+  <div th:replace="/order/order_list_bar.html :: order-list-bar"></div>
+</bar>
+
+<body>
+  <div class="order-list" th:each="order : ${orders}">
+    <div class="order-list-container">
+
+      <div class="order-list-content">
+
+        <div class="order-list-img">
+          <img th:src="${order.storeImg}" />
+        </div>
+
+        <div class="order-list-text">
+          <h2 class="order-check-text" th:if="${order.orderReceive == '1'}">주문 완료!</h2>
+          <h2 class="order-check-text" th:if="${order.orderReceive == '0'}">주문이 취소됐어요...</h2>
+          <h2 class="order-check-text" th:if="${order.orderReceive == null}">주문 대기중.</h2>
+          <h2>[[${order.storeName}]]</h2>
+          <div class="order-list-price">
+            [[${#numbers.formatInteger(order.orderTotalPrice, 3, 'COMMA')}]]원
+          </div>
+          <div class="order-list-bottom">
+        <span class="order-list-date">
+          [[${order.orderDate}]]
+        </span>
+            <a class="detail-btn" th:href="@{/orderViewDetail(code=${order.orderid})}">상세보기</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<div th:replace="/fragments/nav.html :: fragment-nav"></div>
+</html>

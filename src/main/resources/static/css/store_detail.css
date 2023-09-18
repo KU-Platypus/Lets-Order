@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'NanumSquareRoundOTFEB';
+  src: url(/font/NanumSquareRoundOTFEB.otf)
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFB';
+  src: url(/font/NanumSquareRoundOTFB.otf)
+}
+
+.body {
+    margin-top: 3.8rem;
+}
+
+.store-bar {
+    height: 3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color : #FF4E71;
+    box-shadow: 0px -1px 3px 0px #C1C1C1;
+    font-size: 20px;
+}
+
+.store-bar-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'NanumSquareRoundOTFEB';
+}
+
+.store-bar-left{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.store-bar-name{
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.return-btn {
+    margin: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.return-btn:hover{
+    color: #FFFFFF;
+}
+
+.home-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.home-btn img{
+    max-height: 1.5rem;
+}
+
+.member-btn{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.member-btn:hover{
+    color: #FFFFFF;
+}
+
+.container-fluid a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-grid {
+    width: 100%;
+}
+
+.view-cart {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px
+}
+
+.view-cart button {
+    width:100%;
+    background-color: #FF4E71;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    font-family: 'NanumSquareRoundOTFB';
+    font-size: 25px;
+}
+
+#checkpoint {
+    max-height: 50px;
+    margin-left: 20px;
+}
+
+.util-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkorder {
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #FF4E71;
+    border:none;
+    font-family: 'NanumSquareRoundOTFB';
+    font-size: 15px;
+    border-radius: 3em;
+    color:white;
+}
+
+.qr-btn{
+    height: 50px;
+    margin-right: 20px;
+    background-color: #E0E0E0;
+    border:none;
+    font-family: 'NanumSquareRoundOTFB';
+    font-size: 15px;
+    border-radius: 3em;
+    color: #1F1F1F;
+}
+
+.store-info-box{
+    margin: 2rem;
+}
+
+.store-intro-box{
+    margin-bottom: 2rem;
+}

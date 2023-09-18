@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>결제완료!</title>
+
+  <meta name="_csrf" th:content="${_csrf.token}">
+  <meta name="_csrf_header" th:content="${_csrf.headerName}">
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/js/webSocket_connect.js"></script>
+  <link th:href="@{/css/order_complete.css}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>결제 완료!</h1>
+    <img src="https://img.freepik.com/premium-photo/bundle-of-money-banknote-on-pink-background-business-investment-profit-money-saving-concept-3d-render-illustration_73903-989.jpg" alt="돈 이미지" class="money-image">
+    <p class="message" onclick="location.href='/'">클릭 시 홈으로 돌아갑니다!</p>
+  </div>
+</body>
+</html>

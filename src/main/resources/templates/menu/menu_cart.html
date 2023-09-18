@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>장바구니</title>
+
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
+
+    <link rel="stylesheet" href="css/menu_cart.css">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/cart.js}"></script>
+</head>
+
+<bar>
+    <div th:replace="/menu/menu_cart_bar.html :: menu-cart-bar"></div>
+</bar>
+
+<body>
+    <div class="cart">
+        <h2 class="cart-title">장바구니</h2>
+
+        <div class="cart-list">
+            <ul>
+            </ul>
+        </div>
+
+        <div class="list-total-price">텅 비었어요...</div>
+
+        <div class="btn-box">
+            <button class="cart-all-delete" >전체삭제</button>
+            <button class="order-btn" disabled>주문하기</button>
+        </div>
+    </div>
+</body>
+
+</html>

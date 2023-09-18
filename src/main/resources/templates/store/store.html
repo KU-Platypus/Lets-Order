@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <title>매장목록</title>
+
+    <link th:href="@{/css/store.css}" rel="stylesheet" />
+    <link th:href="@{/css/store_list.css}" rel="stylesheet" />
+    <link th:href="@{/css/store_tab.css}" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/store_tab.js}"></script>
+    <script src="/js/webSocket_connect.js"></script>
+</head>
+
+<tab>
+    <div th:replace="~{/store/store_tab.html :: store-tab}"></div>
+    <input type="hidden" th:value="${category}" class="category-code">
+</tab>
+
+<body>
+    <div class="store-list">
+        <tr th:each = "store : ${storeList}">
+            <div th:replace="~{store/store_list::store-content}"></div>
+        </tr>
+    </div>
+
+</body>
+<div th:replace="~{/fragments/nav.html :: fragment-nav}"></div>
+</html>

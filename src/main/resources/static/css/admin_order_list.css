@@ -1,0 +1,18 @@
+.navbar {
+    max-height: 60px;
+    background-color : #ff7f9b;
+}
+/*
+.card{
+    max-height: 150px;
+}
+*/
+.order-list{
+    position: relative;
+}
+
+img {
+    max-width: 100px;
+    max-height: 120px;
+    margin-bottom: 30px
+}

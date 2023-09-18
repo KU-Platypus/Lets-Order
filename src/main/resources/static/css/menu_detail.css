@@ -1,0 +1,133 @@
+@font-face {
+  font-family : 'NanumSquareOTF_acB';
+  src : url(/font/NanumSquareOTF_acB.otf)
+}
+
+@font-face {
+  font-family : 'NanumSquareOTF_acR';
+  src : url(/font/NanumSquareOTF_acR.otf)
+}
+
+@font-face {
+  font-family : 'NanumSquareRoundOTFEB';
+  src : url(/font/NanumSquareRoundOTFEB.otf)
+}
+
+@font-face {
+  font-family : 'NanumSquareRoundOTFR';
+  src : url(/font/NanumSquareRoundOTFR.otf)
+}
+
+.menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #FFFFFF;
+}
+
+.menu-modal-content {
+    text-align: center;
+}
+
+.menu-modal-img{
+    max-height: 17rem;
+    min-height: 17rem;
+}
+
+.menu-modal-name {
+    padding: 20px;
+    font-family : 'NanumSquareRoundOTFEB';
+    font-size: 1.5rem;
+}
+
+.menu-modal-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.amount-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.price-text{
+    font-family : 'NanumSquareOTF_acB';
+    font-size: 1rem;
+}
+
+.amount-text{
+    font-family : 'NanumSquareOTF_acB';
+    font-size: 1rem;
+}
+
+.total-text{
+    font-family : 'NanumSquareOTF_acB';
+    font-size: 1rem;
+}
+
+.menu-total-price {
+    font-family : 'NanumSquareRoundOTFR';
+    font-size: 1rem;
+}
+
+.price {
+    font-family : 'NanumSquareRoundOTFR';
+    font-size: 1rem;
+}
+
+.menu-modal-amount input{
+    width: 2.3rem;
+    margin-right: 0;
+    text-align:center;
+    border: none;
+    outline: none;
+    font-family : 'NanumSquareRoundOTFR';
+    font-size: 1rem;
+}
+
+.amount-box button {
+    border: none;
+    background-color: transparent;
+}
+
+.amount-box button img{
+    max-height: 2.5rem;
+}
+
+.total-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.btn-box button{
+    width: 47%;
+    height: 3rem;
+    border: none;
+    font-family : 'NanumSquareRoundOTFEB';
+    font-size: 120%;
+    border-radius: 2rem;
+}
+
+.close-btn{
+}
+
+.add-cart {
+    background-color: #FF4E71;
+    color: #FFFFFF;
+}

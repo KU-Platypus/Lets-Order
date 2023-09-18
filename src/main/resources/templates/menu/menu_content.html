@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="menu-content">
+  <link th:href="@{/css/menu.css}" rel="stylesheet" />
+    <div class="menu">
+      <div class="menu-box">
+        <div><img th:src="${menu.menuImg}" alt="이미지"></div>
+        <div class="menu-info">
+          <div class="menu-name-box">
+            [[${menu.menuName}]]
+          </div>
+          <div class="menu-price-box">
+            [[${menu.menuPrice}]]원
+          </div>
+          <input type="hidden" th:value="${store.storeid}" name="storeid" class="store-id">
+          <input type="hidden" th:value="${store.storeName}" name="storeName" class="store-name">
+          <input type="hidden" th:value="${menu.menuImg}" name="menuImg" class="menu-img">
+          <input type="hidden" th:value="${menu.menuName}" name="menuName" class="menu-name">
+          <input type="hidden" th:value="${menu.menuPrice}" name="menuPrice" class="menu-price">
+        </div>
+      </div>
+    </div>
+</th:block>
+
+</html>

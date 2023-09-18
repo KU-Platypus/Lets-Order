@@ -1,0 +1,43 @@
+@font-face {
+  font-family : 'NanumSquareOTF_acR';
+  src : url(/font/NanumSquareOTF_acR.otf)
+}
+
+.store-tab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+ul {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+
+    background-color: #FFFFFF;
+    border-bottom : 1px solid #B1B1B1;
+}
+
+li {
+    height: 100%;
+    width: 19.6%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'NanumSquareOTF_acB';
+    font-size: 35px;
+}
+
+li a {
+    text-decoration: none;
+    color: #313131;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/admin_order_list.css}"/>
+    <link rel="stylesheet" th:href="@{/css/admin_modal.css}"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>주문 관리 페이지</title>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/admin">
+            <svg class="bi bi-arrow-left" fill="currentColor" height="25" viewBox="0 0 16 16" width="25"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                      fill-rule="evenodd"/>
+            </svg>
+            주문관리
+        </a>
+    </div>
+</nav>
+
+<!-- 주문 내역 리스트 -->
+<div class="order-list">
+    <div class="card mb-3" th:each="order , iterStat : ${orders}">
+        <div class="row g-1 order_box">
+
+            <div class="col-auto">
+                <div class="card-body">
+                    <h5 class="card-title">주문번호 : [[${order.orderid}]]</h5>
+                    <p class="card-text">[[${order.orderTotalPrice}]]원</p>
+                    <p>[[${order.orderDate}]]</p>
+                    <input type ="hidden" th:id="'receive' + ${iterStat.index}" th:value="${order.orderReceive}">
+                    <button class="btn btn-light" th:id="'accept' + ${iterStat.index}" th:onclick="'AcceptBtnClick(' + ${iterStat.index} + ', ' + ${order.orderid} + ' , ' + ${order.memberid} + ')'">주문 접수</button>
+                    <button class="btn btn-light" th:id="'cancel' + ${iterStat.index}" th:onclick="'CancelBtnClick(' + ${iterStat.index} + ', ' + ${order.orderid} + ' , ' + ${order.memberid} + ')'">주문 취소</button>
+                    <button class="btn btn-light" th:id="${order.orderid}" onclick="openModal(event)">상세 보기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 모달창 콘텐츠 -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">상세 주문 내역</h4>
+            <span class="close">×</span>
+        </div>
+
+        <!-- 모달 창의 본문 영역 -->
+        <div class="modal-body"></div>
+    </div>
+</div>
+
+</body>
+
+<script th:src="@{/js/admin_order.js}" type="text/javascript"></script>
+
+</html>

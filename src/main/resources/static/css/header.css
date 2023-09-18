@@ -1,0 +1,43 @@
+@font-face {
+  font-family : 'NanumSquareRoundOTFEB';
+  src : url(/font/NanumSquareRoundOTFEB.otf)
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF4E71;
+    box-shadow: 0px -1px 3px 0px #C1C1C1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5em;
+    font-size: 33px;
+}
+
+.header-content {
+    width: 100%;
+}
+
+.member-name {
+    font-family: 'NanumSquareRoundOTFEB';
+    font-size: 45px;
+    color: #FFFFFF;
+}
+
+.member-btn{
+    position: absolute;
+    float: right;
+    right: 0;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family : 'NanumSquareRoundOTFEB';
+    font-size: 45px;
+    color: #FFFFFF;
+}
+
+.member-btn:hover{
+    color: #FFFFFF;
+}

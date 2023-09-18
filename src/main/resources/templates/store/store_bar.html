@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<th:block th:fragment="store-bar">
+    <div class="store-bar">
+        <div class="store-bar-content">
+            <div class="store-bar-left">
+                <a class="return-btn" href="#" onClick="history.back()">
+                    ←
+                </a>
+                <span class="store-bar-name">
+                    [[${store.storeName}]]
+                </span>
+            </div>
+
+            <div class="store-bar-right">
+                <button class="home-btn" onclick="location.href='/'">
+                    <img src="/img/icon/home.png">
+                </button>
+                <a class="member-btn" href="/login" sec:authorize="isAnonymous()">
+                    로그인
+                </a>
+                <a class="member-btn" href="/logout" sec:authorize="isAuthenticated()">
+                    로그아웃
+                </a>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+</html>

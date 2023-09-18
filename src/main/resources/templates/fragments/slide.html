@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="fragment-slide">
+
+    <link th:href="@{/css/slide.css}" rel="stylesheet" />
+
+    <div id="slider">
+        <div class="wrapper">
+            <div class="items">
+                <div class="item">
+                    <div class="content">
+                        <img class="slide-img" src="/img/slide/store4.png" alt="...">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img class="slide-img" src="/img/slide/store1.png" alt="...">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img class="slide-img" src="/img/slide/store2.png" alt="...">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img class="slide-img" src="/img/slide/store3.png" alt="...">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img class="slide-img" src="/img/slide/store4.png" alt="...">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <img class="slide-img" src="/img/slide/store1.png" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="current-index"></div>
+    </div>
+</th:block>
+
+</html>

@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'NanumSquareRoundOTFR';
+    src: url(/font/NanumSquareRoundOTFR.otf) format('opentype');
+
+    font-family: 'NanumSquareRoundOTFR';
+    src: url(/font/NanumSquareRoundOTFR.otf) format('opentype');
+  }
+
+  /*가운데 정렬*/
+  body {
+      text-align: center;
+      margin: 0;
+  }
+
+  div.main {
+      display: flex;
+      justify-content: center;
+  }
+
+  tr.menus{
+      font-family: 'NanumSquareRoundOTFR';
+      border-bottom: 1px solid black;
+  }
+
+  .main {
+    padding-bottom: 53px; /* navbar의 높이와 동일한 값 */
+    padding-top: 55px; /* navbar의 높이와 동일한 값 */
+  }
+
+  /*네비게이션 바*/
+  div.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  div.navbar form,
+  div.navbar a,
+  div.navbar button {
+    flex: 1;
+    text-align: center;
+  }
+
+  div.navbar form,
+  div.navbar button{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+  }
+
+  nav.navbar {
+    background-color : #fc9999;
+}
+
+/* 메뉴 이미지 크기*/
+img.img-fluid {
+    max-width: 120px;
+    max-height: 150px;
+}
+
+div.container {
+    font-size: 20px;
+    margin: 10px;
+}
+
+div.card {
+    margin-top: 10px;
+}
+
+div.col {
+    margin: auto;
+}
+
+div.form-check {
+    margin-right: 15px;
+}
+
+div.btn-group {
+    width: 100%; padding: 5px;
+    color: #ffffff;
+    margin-button : 0;
+}
+
+button.btn {
+    color: #000;
+}
+
+button a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav.navbar.top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fc9999;
+    z-index: 9999;
+}
+
+.btn-outline-primary {
+    background-color: white;
+}

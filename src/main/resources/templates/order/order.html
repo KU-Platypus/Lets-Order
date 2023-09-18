@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>결제 화면</title>
+
+  <meta name="_csrf" th:content="${_csrf.token}">
+  <meta name="_csrf_header" th:content="${_csrf.headerName}">
+
+  <link rel="stylesheet" href="css/order.css">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" th:src="@{/js/order.js}"></script>
+  <script src="/js/webSocket_connect.js"></script>
+</head>
+
+<bar>
+  <div th:replace="/menu/menu_cart_bar.html :: menu-cart-bar"></div>
+</bar>
+
+<body>
+  <form>
+    <ul>
+      <li>
+        <div class="order-store-name">
+          <h2><span>[[${cartList.storeName}]]</span></h2>
+          <hr>
+        </div>
+      </li>
+
+      <li>
+        <div class="order-total-price">
+          <h2>결제 금액</h2>
+          <div>[[${cartList.listTotal}]]원</div>
+          <hr>
+        </div>
+      </li>
+
+      <li>
+        <h2>결제유형</h2>
+        <label><input type="radio" value="카드결제" checked="checked" name="payMethod" >카드결제</label>
+        <label><input type="radio" value="후불결제" name="payMethod">후불결제</label>
+        <hr>
+      </li>
+
+      <li class="order-request">
+        <div class="request-text">요청사항</div>
+        <textarea rows="5" cols="50" name="request" maxlength="500"  ></textarea>
+        <hr>
+      </li>
+
+      <li class="order_payment">
+        <div class="btn-box">
+          <input type="button" class="close-btn" value="취소하기">
+          <input type="button" class="order-btn" value="주문하기">
+        </div>
+
+        <input type="hidden" th:value="${memberInfo}" name="memberid" class="member-id">
+        <input type="hidden" th:value="${cartList.storeid}" name="storeid" class="store-id">
+        <input type="hidden" th:value="${cartList.storeName}" name="storeName" class="store-name">
+        <input type="hidden" th:value="${cartList.listTotal}" name="paymentTotal" class="payment-total">
+      </li>
+    </ul>
+  </form>
+</body>
+
+</html>

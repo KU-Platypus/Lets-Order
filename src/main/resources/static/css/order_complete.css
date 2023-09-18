@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FCE4EC; /* 연한 분홍색 배경색 */
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif; /* 이쁜 글씨체로 변경 */
+}
+
+.message {
+  font-size: 30px;
+  text-align: center;
+  color: #666;
+  margin-top: 20px; /* 간격을 20px로 조정 */
+}

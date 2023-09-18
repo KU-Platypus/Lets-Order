@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+  }
+
+nav.navbar {
+    background-color : #fc9999;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 90%;
+    margin: 10px;
+    font-size: 20px;
+}

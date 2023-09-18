@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="menu-detail">
+    <link th:href="@{/css/menu_detail.css}" rel="stylesheet" />
+    <div class="menu-modal" id="menu-modal">
+        <div class="menu-modal-content">
+
+            <div class="info-box">
+                <img id="menu-modal-img" class="menu-modal-img" src="">
+                <div class="menu-modal-name">메뉴 이름</div>
+                <div class="menu-modal-price">
+                    <span class="price-text">가격 </span><span class="price">0</span>
+                </div>
+            </div>
+
+            <div class="amount-box">
+                <span class="amount-text">수량</span>
+                <span class="menu-modal-amount">
+                    <button class="minus-btn"><img src="/img/icon/minus.png"></button>
+                    <input type="number" id="amount" min="1" value="1" readonly>
+                    <button class="plus-btn"><img src="/img/icon/plus.png"></button>
+                </span>
+            </div>
+
+            <div class="total-box">
+                <span class="total-text">총 주문금액</span><span class="menu-total-price">0</span>
+            </div>
+
+            <div class="btn-box">
+                <button type="button" class="close-btn">안 먹을래요</button>
+                <button type="button" class="add-cart">이거 먹을래요!</button>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+</html>

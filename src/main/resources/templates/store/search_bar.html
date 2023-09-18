@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="search-bar">
+  <div class="search-bar">
+    <div class="search-bar-content">
+      <form action="/form" method="post" class="search-box">
+        <input class="search-txt" type="text" name="keyword" placeholder="어떤 매장을 원하시나요?"/>
+        <input class="search-btn" type="image" src="/img/icon/search_btn.png">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+      </form>
+    </div>
+  </div>
+</th:block>
+
+</html>

@@ -1,0 +1,7 @@
+div.card {
+    margin: 10px;
+}
+
+div.row-cols-4 div.col {
+    font-size: 15px;
+}

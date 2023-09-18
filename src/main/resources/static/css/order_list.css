@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'NanumSquareRoundOTFEB';
+    src: url(/font/NanumSquareRoundOTFEB.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareRoundOTFB';
+    src: url(/font/NanumSquareRoundOTFB.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareRoundOTFR';
+    src: url(/font/NanumSquareRoundOTFR.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareRoundOTFL';
+    src: url(/font/NanumSquareRoundOTFL.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareOTF_acL';
+    src: url(/font/NanumSquareOTF_acL.otf)
+}
+
+@font-face {
+    font-family: 'NanumSquareOTF_acEB';
+    src: url(/font/NanumSquareOTF_acEB.otf)
+}
+
+body {
+    margin-top: 4.9em;
+    font-size: 33px;
+}
+
+.order-list-bar {
+    height: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color : #FF4E71;
+    box-shadow: 0px -1px 3px 0px #C1C1C1;
+    font-size: 33px;
+}
+
+.order-list-bar-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-list-bar-left{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'NanumSquareRoundOTFEB';
+}
+
+.order-list-bar-title{
+    font-size: 45px;
+    color: #FFFFFF;
+}
+
+.return-btn {
+    margin: 30px;
+    font-size: 70px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.return-btn:hover{
+    color: #FFFFFF;
+}
+
+.order-list {
+    border-top: 1px solid #BEBEBE;
+}
+
+.order-list-container {
+    width: 100%;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.order-list-content {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+  font-family: 'NanumSquareOTF_acEB';
+}
+
+.order-list-img img{
+    max-height: 13.5rem;
+    margin-right: 2rem;
+}
+
+.order-list-price {
+    font-family: 'NanumSquareRoundOTFL';
+    font-size: 45px;
+    color: #414141;
+}
+
+.order-list-text {
+    width: 100%;
+}
+
+.order-list-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.order-list-date {
+    font-family: 'NanumSquareRoundOTFL';
+    font-size: 35px;
+    color: #4D4D4D;
+}
+
+.detail-btn{
+    margin-right: 2.5rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    border-radius: 1rem;
+    background-color: #EEEEEE;
+    font-family: 'NanumSquareRoundOTFR';
+    font-size: 45px;
+    color: #313131;
+}
+
+.order-detail-container{
+    padding-top: 1.2rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.order-detail-container > div {
+    font-family: 'NanumSquareRoundOTFL';
+    font-size: 45px;
+    color: #414141;
+}
+
+.order-detail-container {
+    border-top: 1px solid #BEBEBE;
+}
+
+.detail-amount{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.order-check-text {
+    font-family: 'NanumSquareRoundOTFB';
+    font-size: 35px;
+}

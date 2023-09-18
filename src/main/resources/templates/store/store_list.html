@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="store-content">
+    <a class="store-list-content" th:href="@{/menu(id=${store.storeid})}">
+
+        <div class="store-img">
+            <div class="store-icon">
+                <img th:src="${store.storeImg}">
+            </div>
+        </div>
+
+        <div class="store-info">
+            <div class="store-name">
+                [[${store.storeName}]]
+            </div>
+
+            <div class="store-time">
+                영업시간 : [[${store.openTime}]] - [[${store.closeTime}]]
+            </div>
+
+            <div class="takeout-mark">
+                <img th:if="${store.takeoutState == 1}" th:src="@{/img/store/takeout_mark3.png}">
+            </div>
+
+        </div>
+
+        <input type="hidden" th:value="${store.storeid}" class="store-id">
+        <input type="hidden" th:value="${store.storeName}" class="store-name">
+    </a>
+</th:block>
+
+</html>

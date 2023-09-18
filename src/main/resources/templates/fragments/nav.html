@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="fragment-nav">
+  <link th:href="@{/css/nav.css}" rel="stylesheet" />
+  <div class="nav">
+    <div class="nav-content">
+      <div class="nav-button home-button" onclick="location.href='/'">
+        <img src="/img/icon/nav/home.png">
+        <div>홈</div>
+      </div>
+
+      <div class="nav-button" onclick="location.href='/search'">
+        <img src="/img/icon/nav/search.png">
+        <div>검색</div>
+      </div>
+
+      <div class="nav-button" onclick="location.href='/orderList'">
+        <img src="/img/icon/nav/list.png">
+        <div>주문내역</div>
+      </div>
+
+      <div class="nav-button" onclick="location.href='/mypage'">
+        <img src="/img/icon/nav/info.png">
+        <div>내정보</div>
+      </div>
+    </div>
+  </div>
+</th:block>
+
+</html>

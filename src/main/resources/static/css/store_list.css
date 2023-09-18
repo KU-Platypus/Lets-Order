@@ -1,0 +1,66 @@
+@font-face {
+  font-family : 'NanumSquareOTF_acB';
+  src : url(/font/NanumSquareOTF_acB.otf)
+}
+
+@font-face {
+  font-family : 'NanumSquareOTF_acR';
+  src : url(/font/NanumSquareOTF_acR.otf)
+}
+
+.store-list-content {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px solid #BEBEBE;
+}
+
+.store-img {
+    margin-right: 40px;
+}
+
+.store-icon img {
+    height: 12vh;
+}
+
+.store-info {
+    width: 100%;
+    align-content: space-around;
+}
+
+.store-name {
+    font-family: 'NanumSquareOTF_acB';
+    font-size: 45px;
+    color: #313131;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.store-time {
+    margin-top: 0.5em;
+    margin-bottom: 0.6em;
+    font-family: 'NanumSquareOTF_acR';
+    font-size: 33px;
+    color: #5F5F5F;
+}
+
+.store-review img{
+    height: 2.1vh;
+    font-size: 33px;
+
+}
+
+.store-review img{
+    height: 2.1vh;
+    font-size: 33px;
+}
+
+.takeout-mark img{
+    height: 2.5vh;
+    font-size: 33px;
+    margin-top: 0.6em;
+}

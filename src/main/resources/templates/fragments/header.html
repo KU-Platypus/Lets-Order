@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<th:block th:fragment="fragment-header">
+  <link th:href="@{/css/header.css}" rel="stylesheet" />
+  <div class="header">
+    <div heder="header-content">
+      <span class="member-name" href="/login" sec:authorize="isAnonymous()">
+        저희의 가족이 되보세요!
+      </span>
+      <span class="member-name" href="/logout" sec:authorize="isAuthenticated()">
+        [[${member.name}]] 님 어서오세요!
+      </span>
+
+      <a class="member-btn" href="/login" sec:authorize="isAnonymous()">
+        로그인
+      </a>
+      <a class="member-btn" href="/logout" sec:authorize="isAuthenticated()">
+        로그아웃
+      </a>
+    </div>
+  </div>
+</th:block>
+
+</html>

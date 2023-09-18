@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<th:block th:fragment="menu-cart-bar">
+  <div class="menu-cart-bar">
+    <div class="menu-cart-bar-content">
+      <div class="menu-cart-bar-left">
+        <a class="return-btn" href="#" onClick="history.back()">
+          ←
+        </a>
+      </div>
+
+      <div class="menu-cart-bar-right">
+        <button class="home-btn" onclick="location.href='/'">
+          <img src="/img/icon/home.png">
+        </button>
+      </div>
+    </div>
+  </div>
+</th:block>
+
+</html>
